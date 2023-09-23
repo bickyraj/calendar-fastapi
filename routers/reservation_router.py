@@ -42,7 +42,7 @@ def create_reservation(reservation: Reservation, db: Session = Depends(get_db)):
     db.commit()
 
     availability.is_available = 1
-    db.add(availability)
+    db.add(availability )
     db.commit()
 
     return reservation
